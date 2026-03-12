@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>질문</title>
+<style>
+body{
+    text-align:center;
+    font-family:Arial;
+    margin-top:100px;
+}
+
+#no{
+    position:absolute;
+}
+
+#result{
+    display:none;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>나랑 사귈래? ❤️</h1>
+
+<button onclick="yes()">예</button>
+<button id="no" onmouseover="move()">아니오</button>
+
+<div id="result">
+    <h2>❤️ 고마워!! ❤️</h2>
+    <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" width="300">
+</div>
+
+<script>
+function move(){
+    let x = Math.random() * window.innerWidth - 100;
+    let y = Math.random() * window.innerHeight - 50;
+
+    let btn = document.getElementById("no");
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+}
+
+function yes(){
+    document.getElementById("result").style.display="block";
+}
+</script>
+
+</body>
+</html>
